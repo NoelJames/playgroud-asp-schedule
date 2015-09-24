@@ -7,7 +7,6 @@ Test drive of MVC Code First approach.
 3. Scaffolding: [Yeoman](http://yeoman.io/)   
 4. MVC V6.0.0-beta7   
 5. DB: SQLite
-6. Does not use Async
 
 ## TODO
 
