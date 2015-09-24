@@ -1,0 +1,55 @@
+@model IEnumerable<playgroud_asp_schedule.Models.Event>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Schedule", null, new { @class = "btn btn-primary pull-right" })
+</p>
+
+<h1>Event List (full)</h1>
+
+<table class="table">
+    <tr>
+        <th>
+             @Html.DisplayNameFor(model => model.event_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stop)
+        </th>		
+        <th>Modify</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.event_id)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.User.name)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Location.name)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.start)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.stop)
+        </td>
+        <td>
+            @*
+			@Html.ActionLink("Edit", "Edit", new { id=item.AlbumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlbumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlbumID })
+			*@
+        </td>
+    </tr>
+}
+</table>

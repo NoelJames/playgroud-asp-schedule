@@ -21,8 +21,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="about">About</a></li>
-                        <li><a asp-controller="Home" asp-action="contact">Contact</a></li>
+                        <li><a asp-controller="Location" asp-action="index">Location</a></li>
+                        <li><a asp-controller="User" asp-action="index">User</a></li>
+                        <li><a asp-controller="Schedule" asp-action="index">Schedule</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +35,7 @@
                 <p>&copy; 2015 - Playgroud ASP Schedule</p>
             </footer>
         </div>
-        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="~/js/site.js"></script>
         @RenderSection("scripts", required: false)

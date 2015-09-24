@@ -9,20 +9,6 @@ namespace playgroud_asp_schedule.Controllers
             return View();
         }
 
-        public IActionResult about()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult error()
         {
             return View("~/Views/Shared/error.cshtml");

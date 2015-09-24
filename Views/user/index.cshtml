@@ -1,0 +1,37 @@
+@model IEnumerable<playgroud_asp_schedule.Models.User>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "User", null, new { @class = "btn btn-primary pull-right" })
+</p>
+
+<h1>User List (full)</h1>
+
+<table class="table">
+    <tr>
+        <th>
+             @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>Modify</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.user_id)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.name)
+        </td>
+        <td>
+            @*
+			@Html.ActionLink("Edit", "Edit", new { id=item.AlbumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlbumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlbumID })
+			*@
+        </td>
+    </tr>
+}
+</table>
